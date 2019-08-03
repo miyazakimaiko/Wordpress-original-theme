@@ -1,0 +1,1041 @@
+/*!
+Theme Name: Colors
+Theme URI: 
+Author: Okiami
+Author URI: 
+Description: Description
+Version: 1.0.0
+License: 
+License URI: LICENSE
+Text Domain: colors
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Colors is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+# Theme Specific Styles
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+## Theme Specific Styles
+--------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    color: #707070;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: 'Dosis', "Sawarabi Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", sans-serif !important;
+    line-height: 1.6;
+    color: #707070;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header-container {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1rem;
+    color: #707070;
+}
+
+.main-title {
+    margin: 0;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-image: linear-gradient(120deg, #FF9696 0%, #BFBBE8 50%, #B5F7FF 100%);
+}
+
+.main-title a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.main-title a:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.page_item {
+    margin: 1rem 2rem;
+    color: #707070;
+}
+
+.page_item a {
+    color: inherit;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.page_item a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 0.1rem;
+    background: #707070;
+    transform: scale(0,1);
+    transform-origin: right top;
+    transition: transform .3s;
+}
+
+.page_item a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page_item a:hover::after {
+    transform-origin: left top;
+    transform: scale(1,1);
+}
+
+.header-bottom-line {
+    height: .2rem;
+    width: 100%;
+    background-image: linear-gradient(120deg, #FF9696 0%, #BFBBE8 50%, #B5F7FF 100%);
+}
+
+/*===================================
+SCREEN AREA
+===================================*/
+
+.screen-area {
+    background: url('./assets/img/screenshot.jpg') 50% 0 repeat fixed;
+    background-size: cover;
+    height: 18rem;
+}
+
+.screen-text {
+    width: 100%;
+    text-align: center;
+    line-height: 18rem;
+    color: #fff;
+}
+
+/*===================================
+MAIN AREA
+===================================*/
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+}
+
+/*===================================
+ARTICLE AREA
+===================================*/
+
+.each-article {
+    position: relative;
+    padding: 4rem;
+    margin: 2rem 1rem;
+    max-width: 821.328px;
+    background: white;
+    border-radius: 2rem;
+}
+
+.each-article::after {
+    position: absolute;
+    z-index: -1;
+    content:'';
+    top: -0.2rem;
+    left: -0.2rem;
+    bottom: -0.2rem;
+    right: -0.2rem;
+    border-radius: 2.2rem;
+    background-image: linear-gradient(120deg, #FF9696 0%, #BFBBE8 50%, #B5F7FF 100%);
+}
+
+.eyecatch-screen {
+    height: 15rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.post-thumbnail img {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.read-more-btn {
+    padding: 1rem;
+    margin: 0 0 0 auto;
+    width: 8rem;
+    border: 1px solid lightgrey;
+    border-radius: 1rem;
+}
+
+.read-more-btn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.read-more-btn a:hover {
+    color: inherit;
+}
+
+.article-title,
+.article-summary {
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.article-title a {
+    color: inherit;
+}
+
+.post-details {
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.date-written,
+.categories,
+.edit-link {
+    display: inline;
+    margin-left: .5rem;
+}
+
+.date-written i,
+.categories i,
+.edit-link i {
+ margin-right: .3rem;
+}
+
+.categories a {
+    color: inherit;
+}
+
+/*===================================
+SIDE BAR
+===================================*/
+
+/*---------------
+SEARCH INPUT 
+----------------*/
+.search-field {
+    width: 15rem;
+    margin: 2rem 1.5rem 0 1.5rem;
+    padding: 1rem;
+    border: none;
+}
+
+.search-form {
+    position: relative;
+    background: #fff;
+}
+
+.search-form::after {
+    position: absolute;
+    z-index: -1;
+    content:'';
+    top: 0;
+    left: 2rem;
+    bottom: -0.18rem;
+    right: 2rem;
+    background-image: linear-gradient(120deg, #FF9696 0%, #BFBBE8 50%, #B5F7FF 100%);
+}
+
+.search-submit {
+    background-color: transparent;
+}
+/*---------------
+ABOUT, POPULAR ARTICLE, CATEGORY (COMMON)
+----------------*/
+#text-2, /* <- About me */
+.recent-posts-extended,
+.widget_recent_comments,
+.widget_categories {
+    position: relative;
+    width: 21rem;
+    margin: 6rem 1.5rem 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 0 0 1rem 1rem;
+}
+
+#text-2::after,  /* <- About me */
+.recent-posts-extended::after,
+.widget_recent_comments::after,
+.widget_categories::after {
+    position: absolute;
+    z-index: -1;
+    content:'';
+    top: -4rem;
+    left: -0.18rem;
+    bottom: -0.18rem;
+    right: -0.2rem;
+    border-radius: 1.2rem;
+}
+
+#text-2::after { /* <- About me */
+    background-image: linear-gradient(120deg, #FA8DBB 0%, #7EBEFF 100%);
+}
+
+.recent-posts-extended::after {
+    background-image: linear-gradient(120deg, #FA8DBB 0%, #7EBEFF 100%);
+}
+
+.widget_recent_comments::after {
+    background-image: linear-gradient(120deg, #FAAFAF 0%, #FFC480 100%);
+}
+
+.widget_categories::after {
+    background-image: linear-gradient(120deg, #86DDD0 0%, #C5B3F5 100%);
+}
+
+.area-title {
+    position: absolute;
+    top: -2.7rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.side-bar section ul li a {
+    margin: 1rem 0;
+    color: #707070;
+}
+
+.side-bar section ul li a:hover {
+    color: #707070;
+}
+
+/*---------------
+ABOUT
+----------------*/
+
+.author-name {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.author-title {
+    margin-bottom: 2rem;
+}
+
+/*---------------
+POPULAR ARTICLE
+----------------*/
+.article-pic {
+    height: 5rem;
+    width: 100%;
+    margin: 2rem auto 1rem auto;
+    background: url('/wp-content/themes/colors/assets/img/screenshot.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/*---------------
+CATEGORY
+----------------*/
+.widget_categories {
+    flex-shrink: 2;
+}
+
+.cat-item {
+    margin-bottom: .6rem;
+    color: inherit;
+}
+
+.colored-dot {
+    margin: 0.2rem 0.6rem 0 0;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+}
+
+.dot0 {
+    background: #a6c1ee;
+}
+
+.dot1 {
+    background: #FC8383;
+}
+
+.dot2 {
+    background: #EDBFBF;
+}
+
+.dot3 {
+    background: #89C5F8;
+}
+
+.dot4 {
+    background: #86DDD0;
+}
+
+.dot5 {
+    background: #89C5F8;
+}
+
+/*===================================
+FOOTER
+===================================*/
+.footer-container {
+    margin-top: 4rem;
+    padding: 4rem 1rem 0 1rem;
+    display: flex;
+    position: relative;
+}
+
+.footer-container::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(120deg, #FF9696 0%, #BFBBE8 50%, #B5F7FF 100%);
+}
+
+.footer-contents {
+    width: 17rem;
+    background: transparent;
+}
+
+.footer-contents h4 {
+    margin-left: 2rem;
+    color: white;
+    font-weight: 600;
+}
+
+.menu-menu-1-container,
+.twitter-area-container,
+.portfolio-area-containter {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.menu-menu-1-container a,
+.portfolio-area-containter a {
+    position: relative;
+    color: white;
+    font-weight: 600;
+    margin: .3rem 0;
+}
+
+.menu-menu-1-container a:hover,
+.portfolio-area-containter a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-menu-1-container a::after,
+.portfolio-area-containter a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 0.1rem;
+    background: white;
+    transform: scale(0,1);
+    transform-origin: right top;
+    transition: transform .3s;
+}
+
+.menu-menu-1-container a:hover::after,
+.portfolio-area-containter a:hover::after {
+    transform-origin: left top;
+    transform: scale(1,1);
+}
+
+#menu-menu-1 li { /* More infomation area */
+    display: block !important;
+}
+
+
+/*===================================
+content-article.php
+comments.php
+===================================*/
+
+.article-screen {
+    background-size: cover;
+    height: 16rem;
+}
+
+.article-container {
+    width: 100%;
+    padding: 0;
+    font-family: 'PT serif', serif;
+}
+
+.article-box-in-container,
+.comments-area {
+    max-width: 800px;
+    margin: 100px auto 20px auto;
+}
+
+.article-content {
+    margin-top: 4.5rem;
+}
+
+.article-content p {
+    font-size: 1.15rem;
+    line-height: 2.3rem;
+}
+
+.post-navigation {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.nav-previous a,
+.nav-next a {
+    color: inherit !important;
+}
+
+#comment {
+    width: 100%;
+    height: 100px;
+}
+
+#submit {
+    background: transparent;
+}
+
+.comments-title {
+    font-size: 1.75rem;
+}
+
+.comment-body {
+    margin-top: 2rem;
+}
+
+.comment-content {
+    margin: 1rem 2rem 0;
+    font-family: 'PT serif', serif;
+}
+
+.comment-reply-link {
+    border: 1px solid;
+    padding: 3px;
+    color: #707070;
+}
+
+#respond {
+    margin-top: 5rem;
+}
+
+/*===================================
+content-page.php
+===================================*/
+.entry-title {
+    text-align: center;
+}
+
+.entry-content {
+    margin: 5.5rem;
+    font-family: 'PT serif', serif;
+    line-height: 2.3rem;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media screen and (max-width: 768px){
+    /*===================================
+    HEADER
+    ===================================*/
+    .page_item {
+        margin: 1rem 1rem;
+    }
+
+    /*===================================
+    MAIN AREA
+    ===================================*/
+    
+    .flexbox {
+        display: block;
+    }
+    
+    /*===================================
+    ARTICLE AREA
+    ===================================*/
+    
+    .each-article {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    #text-2,
+    .each-article,
+    .recent-posts-extended,
+    .widget_recent_comments,
+    .widget_categories {
+        max-width: 760.328px;
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /*===================================
+    SIDE BAR
+    ===================================*/
+    /*---------------
+    SEARCH
+    ----------------*/
+    .search-field {
+        width: calc(100% - 2rem);
+        margin: 2rem 0 0 1.5rem;
+    }
+
+    .search-form label {
+        width: calc(100% - 7rem);
+    }
+
+    /*---------------
+    POPULAR ARTICLE
+    ----------------*/
+    .article-pic {
+        height: 10rem;
+    }
+    
+    /*===================================
+    FOOTER
+    ===================================*/
+    .footer-container {
+        flex-direction: column-reverse;
+    }
+    
+    #twitter-widget-0 {
+        max-width: 250px !important;
+    }
+
+    #text-3 {
+        max-width: 250px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /*===================================
+    content-article.php
+    ===================================*/
+    .article-box-in-container {
+        margin-top: 45px;
+    }
+
+    .article-content {
+        margin-top: 3rem;
+    }
+
+    .article-content p {
+        font-size: 1rem;
+    }
+    
+    /*===================================
+    content-page.php
+    ===================================*/
+    .entry-content {
+        margin: 5.5rem 1rem;
+    }
+
+    }
+    
+    /*Medium devices (tablets, 768px and up)*/
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+    /*===================================
+    MAIN AREA
+    ===================================*/
+    
+    .flexbox {
+        display: block;
+    }
+    
+    /*===================================
+    ARTICLE AREA
+    ===================================*/
+    
+    .each-article {
+        width: 760.328px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /*===================================
+    SIDE BAR
+    ===================================*/
+    
+    .flex-responsive {
+        display: flex;
+    }
+    
+    .search-form {
+        display: block;
+        width: calc(100% - 145px);
+        margin-left: auto;
+        margin-right: auto; 
+    }
+
+    .search-form label {
+        width: 85%;
+    }
+    
+    
+    }
+    
+    /*Large devices (desktops, 992px and up)*/
+    @media screen and (min-width: 992px) and (max-width: 1200px){
+    /*===================================
+    ARTICLE AREA
+    ===================================*/
+    
+    
+    }
+    
