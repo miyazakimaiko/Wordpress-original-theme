@@ -895,6 +895,42 @@ content-page.php
     line-height: 2.3rem;
 }
 
+/*===================================
+content-related-post.php
+===================================*/
+
+.related-posts {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.related-posts-list {
+    display: flex;
+}
+
+.related-posts-list li {
+    width: calc(100% / 4);
+}
+
+.related-posts-list li h4 {
+    margin: 1rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.thumb img {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    width: calc(100% - 1rem);
+    height: 100%;
+}
+
+.related-posts .widget-title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 /*Small devices (landscape phones, 576px and up)*/
 @media screen and (max-width: 768px){
     /*===================================
@@ -992,6 +1028,19 @@ content-page.php
     .entry-content {
         margin: 5.5rem 1rem;
     }
+
+    /*===================================
+    content-related-post.php
+    ===================================*/
+
+    .related-posts-list {
+        flex-wrap: wrap;
+    }
+
+    .related-posts-list li {
+        width: 50%;
+    }
+
 
     }
     
