@@ -9,15 +9,19 @@
 
 ?>
 
-	<div class="each-article">
+	<section class="each-article">
+		
+		<meta itemprop="about" content="<?php echo get_post_meta($post->ID, '_aioseop_description', true); ?>">
+
 		<?php if( has_post_thumbnail() ) { ?>
-		<a href=""><div class="eyecatch-screen"><?php colors_post_thumbnail(); ?></div></a>
+		<div class="eyecatch-screen"><?php colors_post_thumbnail(); ?></div>
 		<?php } ?>
+
 		<?php
 			if ( is_singular() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
-				the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="article-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" title="'.the_title_attribute('echo=0').'" itemprop="url">', '</a></h2>' );
 			endif;
 
 			if ( 'post' === get_post_type() ) :
@@ -28,8 +32,10 @@
 			<p class="categories"><i class="fa fa-folder"></i><?php the_category(', '); ?></p>
 			<?php edit_post_link( 'Edit', '<p class="edit-link"><i class="fa fa-pencil"></i>', '</p>' ); ?>
 		</div>
-		<article class="article-summary"><?php the_excerpt(); ?></article>
-	</div>
+
+		<div class="article-summary"><?php the_excerpt(); ?></div>
+
+	</section>
 	<?php endif; ?>
 
 

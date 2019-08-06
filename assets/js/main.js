@@ -1,3 +1,6 @@
+//
+// Main screen effect
+//
 $(function() {
 
     //Cache the window object
@@ -12,7 +15,7 @@ $(function() {
 
             var yPos = -($window.scrollTop() / $bgobj.data('speed'));
 
-            var coords = '50% '+ yPos + 'px';
+            var coords = '80% '+ yPos + 'px';
 
             $bgobj.css({ backgroundPosition: coords });
         });
@@ -20,3 +23,11 @@ $(function() {
     });
 
 });
+
+//
+// adding schema.org 
+//
+
+$(".nav-bar ul li").attr("itemprop", "url");
+
+$(".nav-bar ul li a").attr("itemprop", "name");

@@ -31,7 +31,7 @@ SCREEN AREA
 ARTICLE AREA
 ==========================================-->
 	<div class="article-container">
-		<div class="article-area">
+		<article class="article-area">
 
 		<?php
 		if ( have_posts() ) :
@@ -66,7 +66,7 @@ ARTICLE AREA
 		endif;
 		?>
 
-	</div><!-- article-area -->
+	</article><!-- article-area -->
 </div><!-- article-container -->
 
 <?php

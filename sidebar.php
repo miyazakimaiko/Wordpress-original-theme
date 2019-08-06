@@ -15,13 +15,14 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <!--=========================================
 SIDE BAR
 ==========================================-->
-		<aside class="side-bar">
+		<aside class="side-bar"role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+		
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
-				<div class="flex-responsive">
-				<?php dynamic_sidebar( 'sidebar-2' ); ?>
-				</div>
+			<div class="flex-responsive">
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div>
 
 		</aside><!-- side bar end -->
-	</section><!-- flexbox end -->
+	</div><!-- flexbox end -->
 </main>

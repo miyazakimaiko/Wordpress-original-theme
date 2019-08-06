@@ -15,11 +15,13 @@
 <!--=========================================
 FOOTER
 ==========================================-->
-<footer>
+<footer role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+	
 	<div class="footer-line-top"></div>
 	<div class="footer-container">
-	<?php dynamic_sidebar( 'footer' ); ?>
+		<?php dynamic_sidebar( 'footer' ); ?>
 	</div>
+
 </footer>
 
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.4.1.min.js"></script>
