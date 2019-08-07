@@ -362,7 +362,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-family: 'Dosis', "Sawarabi Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", sans-serif !important;
+    font-family: 'Dosis', sans-serif !important;
     line-height: 1.6;
     color: #707070;
     margin: 0 auto;
@@ -537,6 +537,7 @@ ARTICLE AREA
 
 .article-title a {
     color: inherit;
+    font-family: 'Dosis', sans-serif !important;
 }
 
 .post-details {
@@ -645,6 +646,11 @@ ABOUT, POPULAR ARTICLE, CATEGORY (COMMON)
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.about-contents {
+    font-family: 'Lato', sans-serif;
+    font-size: .9rem;
 }
 
 .side-bar section ul li a {
@@ -825,7 +831,7 @@ comments.php
 .article-container {
     width: 100%;
     padding: 0;
-    font-family: 'PT serif', serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .article-box-in-container,
@@ -872,7 +878,7 @@ comments.php
 
 .comment-content {
     margin: 1rem 2rem 0;
-    font-family: 'PT serif', serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .comment-reply-link {
@@ -894,7 +900,7 @@ content-page.php
 
 .entry-content {
     margin: 5.5rem;
-    font-family: 'PT serif', serif;
+    font-family: 'Lato', sans-serif;
     line-height: 2.3rem;
 }
 
@@ -1050,7 +1056,7 @@ content-related-post.php
     content-article.php
     ===================================*/
     .article-box-in-container {
-        margin-top: 45px;
+        margin: 5.5rem 1rem;
     }
 
     .article-content {
@@ -1059,6 +1065,16 @@ content-related-post.php
 
     .article-content p {
         font-size: 1rem;
+    }
+
+    .nav-next {
+        width: calc(50% - 1rem);
+        margin-right: 1rem;
+    }
+
+    .nav-previous {
+        width: calc(50% - 1rem);
+        margin-left: 1rem;
     }
     
     /*===================================
@@ -1078,6 +1094,10 @@ content-related-post.php
 
     .related-posts-list li {
         width: 50%;
+    }
+
+    .widget-title {
+        margin-left: 1rem;
     }
 
 
