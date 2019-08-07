@@ -37,7 +37,7 @@
 	<!--=========================================
 	HEADER
 	==========================================-->
-	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<header itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-container">
             <h1 class="main-title"><a href="https://miyazakimaiko.com"><?php bloginfo('name'); ?></a></h1>
             

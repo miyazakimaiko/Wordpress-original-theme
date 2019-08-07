@@ -20,6 +20,9 @@ FOOTER
 	<div class="footer-line-top"></div>
 	<div class="footer-container">
 		<?php dynamic_sidebar( 'footer' ); ?>
+		<div class="copy-right-container">
+			<p>Copyright © Miyazaki Maiko, All Rights Reserved.</p>
+		</div>
 	</div>
 
 </footer>

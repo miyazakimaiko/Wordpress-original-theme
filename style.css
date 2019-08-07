@@ -470,7 +470,9 @@ MAIN AREA
 
 .flexbox {
     display: flex;
-    justify-content: center;
+    width: 1190px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 /*===================================
@@ -727,8 +729,7 @@ FOOTER
 ===================================*/
 .footer-container {
     margin-top: 4rem;
-    padding: 4rem 1rem 0 1rem;
-    display: flex;
+    padding: 1.5rem 1rem 0 1rem;
     position: relative;
 }
 
@@ -744,41 +745,38 @@ FOOTER
 }
 
 .footer-contents {
-    width: 17rem;
+    width: 100%;
     background: transparent;
 }
 
-.footer-contents h4 {
-    margin-left: 2rem;
-    color: white;
-    font-weight: 600;
-}
-
-.menu-menu-1-container,
-.twitter-area-container,
-.portfolio-area-containter {
+.footer-contents div ul {
     display: flex;
-    flex-direction: column;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.menu-menu-1-container a,
-.portfolio-area-containter a {
+.menu-menu-1-container li {
+    padding: 0 1.5rem;
+    border-right: 1px solid #f9f9f9;
+}
+
+.menu-menu-1-container li:last-child {
+    border: none;
+}
+
+.menu-menu-1-container a {
     position: relative;
     color: white;
     font-weight: 600;
-    margin: .3rem 0;
+    margin: 0;
 }
 
-.menu-menu-1-container a:hover,
-.portfolio-area-containter a:hover {
+.menu-menu-1-container a:hover {
     color: white;
     text-decoration: none;
 }
 
-.menu-menu-1-container a::after,
-.portfolio-area-containter a::after {
+.menu-menu-1-container a::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -791,16 +789,21 @@ FOOTER
     transition: transform .3s;
 }
 
-.menu-menu-1-container a:hover::after,
-.portfolio-area-containter a:hover::after {
+.menu-menu-1-container a:hover::after {
     transform-origin: left top;
     transform: scale(1,1);
 }
 
-#menu-menu-1 li { /* More infomation area */
-    display: block !important;
+.copy-right-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 2rem;
 }
 
+.copy-right-container p {
+    color: white;
+}
 
 /*===================================
 content-article.php
@@ -953,8 +956,25 @@ content-related-post.php
     ===================================*/
     
     .each-article {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+
+    .each-article::after {
+        border-radius: .7rem;
+    }
+
+    .article-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .categories {
+        display: none;
+    }
+
+    .date-written {
+        font-size: .7rem;
     }
     
     #text-2,
@@ -966,6 +986,15 @@ content-related-post.php
         width: calc(100% - 30px);
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .article-summary p {
+        font-size: .9rem;
+    }
+
+    .read-more-btn {
+        padding: 0.5rem;
+        border-radius: 0.3rem;
     }
     
     /*===================================
@@ -996,13 +1025,23 @@ content-related-post.php
     .footer-container {
         flex-direction: column-reverse;
     }
+    .footer-contents {
+        width: 100%;
+    }
+
+    .footer-contents div ul li,
+    .copy-right-container p {
+        font-size: .8rem;
+    }
     
     #twitter-widget-0 {
-        max-width: 250px !important;
+        width: 100% !important;
+        max-width: 700px !important;
     }
 
     #text-3 {
-        max-width: 250px !important;
+        width: 100% !important;
+        max-width: 700px !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
