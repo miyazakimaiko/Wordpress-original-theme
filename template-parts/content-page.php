@@ -15,19 +15,50 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php colors_post_thumbnail(); ?>
+<?php colors_post_thumbnail(); ?>
 
-	<div class="flexbox">
+<div class="breadcrumb">
 
-		<article class="entry-content">
-			<?php
-			the_content();
+	<span class="" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="<?php echo home_url(); ?>" itemprop="url">
+			<span itemprop="title">HOME</span>
+		</a>&gt;&nbsp;
+	</span>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'colors' ),
-				'after'  => '</div>',
-			) );
-			?>
+	<?php if ( is_single() ) { ?>
+
+		<span class="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+			<a href="<?php $cat = get_the_category(); echo get_category_link($cat[0]->cat_ID); ?>" itemprop="url">
+				<span itemprop="title"><?php echo $cat[0]->name; ?></span>
+			</a>&gt;&nbsp;
+		</span>
+
+	<?php } else { ?>
+	<?php } ?>
+
+	<strong style="color: #7B7B7B;font-size: 14px;font-weight: 300;"><?php the_title(); ?></strong>
+
+</div>
+
+		<article class="article-container">
+		
+			<meta itemprop="about" content="<?php echo get_post_custom()['_aioseop_description'][0]; ?>">
+			
+			<section class="article-box-in-container">
+			
+				<div class="article-content" itemprop="articleBody">
+					<?php
+					the_content();
+
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'colors' ),
+						'after'  => '</div>',
+					) );
+					?>
+				</div>
+
+			</section>
+
 		</article><!-- .entry-content -->
 
 		<?php if ( get_edit_post_link() ) : ?>
@@ -53,6 +84,5 @@
 			</footer><!-- .entry-footer -->
 			<?php endif; ?>
 
-	<?php get_sidebar(); ?><!-- incl .flexbox -->
 
 </div><!-- #post-<?php the_ID(); ?> -->

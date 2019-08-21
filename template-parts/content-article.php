@@ -53,7 +53,9 @@ SCREEN AREA
 				<p class="categories"><i class="fa fa-folder"></i><?php the_category(', '); ?></p>
 				<?php edit_post_link( 'Edit', '<p class="edit-link"><i class="fa fa-pencil"></i>', '</p>' ); ?>
 			</div>
-			<div class="article-content" itemprop="articleBody"><?php the_content(); ?></div>
+			<div class="article-content" itemprop="articleBody">
+				<?php the_content(); ?>
+			</div>
 		</section>
 
 		<p itemprop="keywords"><i class="fa fa-tags"></i> <?php the_tags(); ?></p>
