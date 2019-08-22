@@ -350,7 +350,7 @@ object {
 
 * {
     box-sizing: border-box;
-    color: #707070;
+    color: #555;
 }
 
 ul {
@@ -364,7 +364,7 @@ body {
     text-rendering: optimizeLegibility;
     font-family: 'Dosis', sans-serif !important;
     line-height: 1.6;
-    color: #707070;
+    color: #555;
     margin: 0 auto;
 }
 
@@ -377,7 +377,7 @@ main {
     text-align: center;
     margin: 0;
     padding-bottom: 1rem;
-    color: #707070;
+    color: #555;
 }
 
 .main-title {
@@ -408,7 +408,7 @@ main {
 
 .page_item {
     margin: 1rem 2rem;
-    color: #707070;
+    color: #555;
 }
 
 .page_item a {
@@ -425,7 +425,7 @@ main {
     content: '';
     width: 100%;
     height: 0.1rem;
-    background: #707070;
+    background: #555;
     transform: scale(0,1);
     transform-origin: right top;
     transition: transform .3s;
@@ -649,17 +649,17 @@ ABOUT, POPULAR ARTICLE, CATEGORY (COMMON)
 }
 
 .about-contents {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Plantagenet Cherokee', sans-serif;
     font-size: .9rem;
 }
 
 .side-bar section ul li a {
     margin: 1rem 0;
-    color: #707070;
+    color: #555;
 }
 
 .side-bar section ul li a:hover {
-    color: #707070;
+    color: #555;
 }
 
 /*---------------
@@ -831,7 +831,7 @@ comments.php
 .article-container {
     width: 100%;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Plantagenet Cherokee', sans-serif;
 }
 
 .article-box-in-container,
@@ -845,8 +845,36 @@ comments.php
 }
 
 .article-content p {
-    font-size: 1.15rem;
-    line-height: 2.3rem;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.article-content h2 {
+    margin: 6rem 0 3rem 0!important;
+    font-size: 2.3rem;
+    font-family: 'Avenir', sans-serif;
+    color: #333
+}
+
+.article-content h3 {
+    font-family: 'Avenir', sans-serif;
+    color: #333
+}
+
+.article-content li {
+    font-size: 1.3rem;
+}
+
+.article-content ul {
+    margin-bottom: 40px;
+}
+
+.article-content p a {
+    font-size: 1.3rem;
+}
+
+.wp-block-image {
+    margin-bottom: 40px;
 }
 
 .post-navigation {
@@ -878,13 +906,13 @@ comments.php
 
 .comment-content {
     margin: 1rem 2rem 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Plantagenet Cherokee', sans-serif;
 }
 
 .comment-reply-link {
     border: 1px solid;
     padding: 3px;
-    color: #707070;
+    color: #555;
 }
 
 #respond {
@@ -900,7 +928,7 @@ content-page.php
 
 .entry-content {
     margin: 5.5rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Plantagenet Cherokee', sans-serif;
     line-height: 2.3rem;
 }
 
@@ -1064,7 +1092,8 @@ content-related-post.php
     }
 
     .article-content h2 {
-        margin-bottom: 3rem !important;
+        margin: 2rem 0 3rem 0!important;
+        font-size: 1.5rem;
     }
 
     .article-content p {
