@@ -126,9 +126,51 @@ if ( ! function_exists( 'colors_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
+			<div id="screen" data-type="background" data-speed="5" class="screen-area clearfix" style="background: url('<?php the_post_thumbnail_url(); ?>') 50% 0 repeat fixed; background-size: cover; height: 18rem;">
+				<article>
+					<? the_title( '<h1 class="screen-text">', '</h1>' ); ?>
+				</article>
+			</div><!-- screen area -->
+
+
+		<?php else : ?>
+
+		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+			<?php
+			the_post_thumbnail( 'post-thumbnail', array(
+				'alt' => the_title_attribute( array(
+					'echo' => false,
+				) ),
+			) );
+			?>
+		</a>
+
+		<?php
+		endif; // End is_singular().
+	}
+endif;
+
+if ( ! function_exists( 'colors_top_page_thumbnail' ) ) :
+	/**
+	 * Displays an optional post thumbnail.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 */
+	function colors_top_page_thumbnail() {
+		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+			return;
+		}
+
+		if ( is_singular() ) :
+			?>
+
+			<div id="screen" data-type="background" data-speed="5" class="screen-area clearfix" style="background: url('<?php the_post_thumbnail_url(); ?>') 50% 0 repeat fixed; background-size: cover; height: 18rem;">
+				<article>
+					<h1 class="screen-text"><? bloginfo('description'); ?></h1>
+				</article>
+			</div><!-- screen area -->
+
 
 		<?php else : ?>
 
