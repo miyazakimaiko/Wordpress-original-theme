@@ -21,10 +21,10 @@ $id = get_the_ID();
 <!--=========================================
 SCREEN AREA
 ==========================================-->
-    <div id="screen" data-type="background" data-speed="5" class="screen-area clearfix" style="background: url('<?php the_post_thumbnail_url(); ?>') 50% 0 repeat fixed; background-size: cover; height: 18rem;">
-        <article>
-		<h1 class="screen-text"><? wp_title_rss(); ?></h1>
-        </article>
+    <div id="screen" data-type="background" data-speed="5" class="screen-area screen-blog clearfix" style="background-size: cover; height: 18rem;">
+        <div>
+		<h1 class="screen-text">ARTICLES</h1>
+        </div>
 	</div><!-- screen area -->
 
 
