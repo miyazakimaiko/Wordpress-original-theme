@@ -27,7 +27,7 @@ FOOTER
 
 </footer>
 
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.4.1.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
+<!--<script src="<?php //bloginfo('template_directory'); ?>/assets/js/jquery-3.4.1.min.js"></script>
+<script src="<?php //bloginfo('template_directory'); ?>/assets/js/main.js"></script>-->
 </body>
 </html>
