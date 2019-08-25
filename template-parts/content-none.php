@@ -10,11 +10,13 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'colors' ); ?></h1>
-	</header><!-- .page-header -->
 
-	<div class="page-content">
+	<section class="each-article">
+
+		<header class="page-header">
+			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'colors' ); ?></h1>
+		</header><!-- .page-header -->
+
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
@@ -47,5 +49,5 @@
 
 		endif;
 		?>
-	</div><!-- .page-content -->
+	</section><!-- .each-article -->
 </section><!-- .no-results -->
