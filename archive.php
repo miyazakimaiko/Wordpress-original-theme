@@ -11,7 +11,7 @@ get_header();
 ?>
 <section class="flexbox">
 
-	<div id="primary" class="content-area">
+	<div id="archive" class="content-area">
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
