@@ -610,6 +610,8 @@ SEARCH INPUT
 
 .search-submit {
     background-color: transparent;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
 }
 /*---------------
 ABOUT, POPULAR ARTICLE, CATEGORY (COMMON)
@@ -1340,11 +1342,15 @@ article decoration
     content-article.php
     ===================================*/
     .article-box-in-container {
-        margin: 5.5rem 1rem;
+        margin: 0 1rem;
+    }
+
+    .article-container-topPage {
+        margin: 50px auto 20px auto;
     }
 
     .article-content {
-        margin-top: 3rem;
+        margin-top: 0;
     }
 
     .article-content h2 {
@@ -1355,6 +1361,7 @@ article decoration
     .article-content p,
     .article-content li {
         font-size: 1rem;
+        margin-bottom: 20px;
     }
 
     .nav-next {
@@ -1399,6 +1406,12 @@ article decoration
     .flex-flow3,
     .flex-flow4 {
         flex-direction: column;
+        padding-top: 30px;
+
+    }
+
+    .topPage-wrapper1 {
+        padding: 50px 35px 0;
     }
 
     .img-face {
@@ -1417,6 +1430,11 @@ article decoration
     .topPage-wrapper2 {
         padding-bottom: 50px;
     }
+
+    .topPage-wrapper3,
+    .topPage-wrapper4 {
+        padding: 25px 35px;
+    }
     
     .single-link1 {
         margin: 0 auto;
@@ -1428,6 +1446,15 @@ article decoration
         padding-right: 0;
         margin: 0 auto;
     }
+
+
+    /*===================================
+    portfolio page decoration
+    ===================================*/
+
+    .tab-link {
+        font-size: 1rem;
+    } 
 
     }
     
