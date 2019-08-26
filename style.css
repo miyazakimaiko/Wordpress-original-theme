@@ -1138,6 +1138,8 @@ article decoration
 /* tag link decoration */
 .tab-link-wrapper {
     margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tab-link-container {
@@ -1199,6 +1201,26 @@ article decoration
     opacity: 1;
     color: white;
 }
+
+.gitHub-link {
+    line-height: 53px;
+    background-color: #7EBEFF;
+    padding: 4px 15px;
+    color: white;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.gitHub-link i {
+    color: white;
+}
+
+.gitHub-link:hover {
+    text-decoration: none;
+    border: none;
+    color: white;
+}
+
 
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -1372,13 +1394,28 @@ article decoration
     top page decoration
     ===================================*/
 
-    .flex-flow2 {
+    .flex-flow1,
+    .flex-flow2,
+    .flex-flow3,
+    .flex-flow4 {
         flex-direction: column;
     }
 
     .img-face {
         height: 150px;
         width: 150px;
+    }
+
+    .img-face-container,
+    .img-container-r,
+    .img-container-l {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .topPage-wrapper2 {
+        padding-bottom: 50px;
     }
     
     .single-link1 {
