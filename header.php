@@ -37,9 +37,13 @@
 	<!--=========================================
 	HEADER
 	==========================================-->
-	<header itemscope itemtype="http://schema.org/WPHeader">
+	<header>
         <div class="header-container">
-            <h1 class="main-title"><a href="https://miyazakimaiko.com"><?php bloginfo('name'); ?></a></h1>
+            <h1 class="main-title">
+				<a href="https://miyazakimaiko.com">
+					<? get_custom_logo(); ?>
+				</a>
+			</h1>
             
 			<?php
 				wp_nav_menu( array(
@@ -53,3 +57,5 @@
             <div class="header-bottom-line"></div>
         </div>
     </header>
+
+	

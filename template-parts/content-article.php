@@ -3,14 +3,14 @@
 SCREEN AREA
 ==========================================-->
 <?php if( has_post_thumbnail() ) { ?>
-    <div class="article-screen" itemscope itemtype='http://schema.org/ImageObject' itemprop="image">
+    <div class="article-screen">
     <?php colors_post_thumbnail('post-thumbnail',array('itemprop'=>'image')); ?>
     </div><!-- screen area -->
 <?php } ?>
 
 <div class="breadcrumb">
 
-	<span class="" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+	<span>
 		<a href="<?php echo home_url(); ?>" itemprop="url">
 			<span itemprop="title">HOME</span>
 		</a>&gt;&nbsp;
@@ -18,7 +18,7 @@ SCREEN AREA
 
 	<?php if ( is_single() ) { ?>
 
-		<span class="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+		<span class="breadcrumbs">
 			<a href="<?php $cat = get_the_category(); echo get_category_link($cat[0]->cat_ID); ?>" itemprop="url">
 				<span itemprop="title"><?php echo $cat[0]->name; ?></span>
 			</a>&gt;&nbsp;
@@ -31,11 +31,11 @@ SCREEN AREA
 
 </div>
 
-<main itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<main>
 
-	<article class="article-container" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+	<article>
 
-		<meta itemprop="about" content="<?php echo get_post_custom()['_aioseop_description'][0]; ?>">
+		<meta>
 		
 		<section class="article-box-in-container">
 			<?php

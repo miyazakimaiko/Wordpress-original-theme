@@ -29,3 +29,17 @@ get_header();
 
 <?php
 get_footer();
+?>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "Maiko Miyazaki",
+  "url": "https://miyazakimaiko.com",
+  "image": "https://miyazakimaiko.com/wp-content/themes/colors/assets/img/face.jpg",
+  "sameAs": "https://www.linkedin.com/in/maiko-miyazaki-442ab0169/",
+  "jobTitle": "Junior Web Developer",
+  "email": "hello@miyazakimaiko.com"
+}
+</script>
