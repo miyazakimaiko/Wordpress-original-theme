@@ -1,29 +1,20 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+/*
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Colors
  */
 
 get_header();
 ?>
-
-	<div id="single" class="content-area">
-		<main id="main" class="site-main">
+	<div id="contact" class="content-area">
+		<main>
 
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'article', get_post_type() );
-
-			the_post_navigation();
-
-			wcr_related_posts(array(
-				'limit' => 4
-			));
+			get_template_part( 'template-parts/content', 'contact' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			//if ( comments_open() || get_comments_number() ) :

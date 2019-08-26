@@ -985,6 +985,53 @@ content-related-post.php
 }
 
 /*===================================
+content-contact.php
+===================================*/
+
+.name-input,
+.email-input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 14px;
+    border: 1px solid lightgray;
+}
+
+.input-title {
+    margin: 0 10px;
+}
+
+.contact-name,
+.contact-email,
+.contact-comments {
+    margin: 0 auto;
+    max-width: 630px;
+}
+
+.comments-input {
+    width: 100%;
+    height: 35vh;
+    padding: 5px;
+    border-radius: 14px;
+    border: 1px solid lightgray;
+}
+
+.name-input:focus,
+.email-input:focus,
+.comments-input:focus {
+    outline: none;
+    border-color: #868686;
+}
+
+.contact-submit {
+    border: 1;
+    border-radius: 10px;
+    background: #D2AFDE;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+}
+
+/*===================================
 top page decoration
 ===================================*/
 .article-container-topPage {
