@@ -51,8 +51,8 @@ get_footer();
   "image": {
     "@type": "ImageObject",
     "url": "https://miyazakimaiko.com/wp-content/themes/colors/assets/img/face.jpg",
-    "width": 696,
-    "height": 696
+    "width": 323,
+    "height": 326
   },
   "author": {
     "@type": "Person",
@@ -60,7 +60,13 @@ get_footer();
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Maiko Miyazaki"
+    "name": "Maiko Miyazaki",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://miyazakimaiko.com/wp-content/uploads/2019/08/port-logo2-e1566910297561.png",
+      "width": 348,
+      "height": 48
+    }
   },
   "datePublished": "2019-08-26",
   "dateModified": "2019-08-26"

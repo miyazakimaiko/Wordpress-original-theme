@@ -39,12 +39,7 @@ SCREEN AREA
 		
 		<section class="article-box-in-container">
 			<?php
-				if ( is_singular() ) :
-					the_title( '<h3 class="article-title" itemprop="name headline"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"  title="'. the_title_attribute('echo=0'). '"itemprop="url">', '</a></h3>' );
-				else :
-					the_title( '<h3 class="article-title" itemprop="name headline"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" title="'. the_title_attribute('echo=0'). '" itemprop="url">', '</a></h3>' );
-				endif;
-
+				
 				if ( 'post' === get_post_type() ) :
 			?>
 			
@@ -53,12 +48,12 @@ SCREEN AREA
 				<p class="categories"><i class="fa fa-folder"></i><?php the_category(', '); ?></p>
 				<?php edit_post_link( 'Edit', '<p class="edit-link"><i class="fa fa-pencil"></i>', '</p>' ); ?>
 			</div>
-			<div class="article-content" itemprop="articleBody">
+			<div class="article-content">
 				<?php the_content(); ?>
 			</div>
 		</section>
 
-		<p itemprop="keywords"><i class="fa fa-tags"></i> <?php the_tags(); ?></p>
+		<!--<p><i class="fa fa-tags"></i> <?php //the_tags(); ?></p>-->
 
 	</article>
 
@@ -66,3 +61,37 @@ SCREEN AREA
 
 <?php endif; ?>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "<?php esc_url( get_permalink() ); ?>"
+  },
+  "headline": "<?php the_title(); ?>",
+  "description": "<?php echo get_the_excerpt(); ?>",
+  "image": {
+    "@type": "ImageObject",
+    "url": "<?php the_post_thumbnail_url(); ?>",
+    "width": 4496,
+    "height": 3000
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Maiko Miyazaki"
+  },
+  "datePublished": "<?php echo get_the_date(); ?>",
+  "dateModified": "<?php echo get_the_modified_date(); ?>",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Maiko Miyazaki",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://miyazakimaiko.com/wp-content/uploads/2019/08/port-logo2-e1566910297561.png",
+      "width": 348,
+      "height": 48
+    }
+  }
+}
+</script>

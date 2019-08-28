@@ -15,7 +15,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <!--=========================================
 SIDE BAR
 ==========================================-->
-		<aside class="side-bar"role="complementary">
+		<aside class="side-bar" role="complementary" id="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 		
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
