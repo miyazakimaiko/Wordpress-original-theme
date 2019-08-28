@@ -131,15 +131,6 @@ function colors_widgets_init() {
 		'before_title'  => '<h4 class="ft-contents-title">',
 		'after_title'   => '</h4>',
 	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Header', 'colors' ),
-		'id'            => 'header',
-		'description'   => esc_html__( 'Add widgets here.', 'colors' ),
-		'before_widget' => '<section id="%1$s" class="footer-contents">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<li class="list-inline-item header-list">',
-		'after_title'   => '</li>',
-	) );
 }
 add_action( 'widgets_init', 'colors_widgets_init' );
 
@@ -249,4 +240,18 @@ function wcr_related_posts($args = array()) {
     include( locate_template('template-parts/content-related-posts.php', false, false) );
 
     wp_reset_postdata();
+}
+
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu
+{   
+    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
+    {
+        $output .= '<li itemprop="name">';
+        $item_output .= '<a itemprop="url" href="'. esc_url( get_permalink($item) ) .'">'. get_the_title($item) . '</a>';
+        $output .= apply_filters('walker_nav_menu_start_el',
+                                  $item_output,
+                                  $item,
+                                  $depth,
+								  $args);
+	}
 }
