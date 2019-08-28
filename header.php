@@ -31,26 +31,27 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="primary" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'colors' ); ?></a>
 
 	<!--=========================================
 	HEADER
 	==========================================-->
-	<header>
+	<header itemscope="itemscope" role="contentinfo" itemtype="http://schema.org/WPHeader">
         <div class="header-container">
             <h1 class="main-title">
 				<a href="https://miyazakimaiko.com">
-					<? get_custom_logo(); ?>
+					<? echo get_custom_logo(); ?>
 				</a>
 			</h1>
             
 			<?php
 				wp_nav_menu( array(
 					'theme_location'  => 'primary',
-					'container'       => 'div',
-					'container_class' => 'nav-bar nav-bar-fixed-top',
-					'menu_class'      => 'nav-bar nav-bar-fixed-top'
+					'container'       => false,
+					'menu_class'      => 'nav-bar nav-bar-fixed-top',
+					'items_wrap'      => '<ul>%3$s</ul>',
+					'walker'          => new Custom_Walker_Nav_Menu
 				));
 			?>
 

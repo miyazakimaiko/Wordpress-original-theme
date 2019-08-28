@@ -15,7 +15,7 @@
 		<!--=========================================
 		FOOTER
 		==========================================-->
-		<footer role="contentinfo">
+		<footer id="footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 			
 			<div class="footer-line-top"></div>
 			<div class="footer-container">
