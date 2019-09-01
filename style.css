@@ -459,6 +459,7 @@ SCREEN AREA
 .screen-area {
     position: relative;
     z-index: -1;
+    background-size: cover;
 }
 
 .screen-area::before {
@@ -1097,7 +1098,7 @@ top page decoration
 }
 
 .img-container-l-lg {
-    box-sizing: border-box;
+    width: 160px;
     padding: 35px 10px 35px 35px;
 }
 
@@ -1237,6 +1238,10 @@ article decoration
     ===================================*/
     .page_item {
         margin: 1rem 1rem;
+    }
+
+    .page_item, .nav-bar ul li {
+        margin: 0.5rem 1.5rem;
     }
 
     /*===================================
@@ -1426,7 +1431,7 @@ article decoration
     .img-face-container,
     .img-container-r,
     .img-container-l {
-        width: fit-content;
+        width: 150px;
         margin: 0 auto;
         padding: 0;
     }
