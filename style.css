@@ -373,6 +373,10 @@ main {
     margin: 0 auto;
 }
 
+p {
+    font-family: 'Avenir', sans-serif;
+}
+
 .header-container {
     text-align: center;
     margin: 0;
