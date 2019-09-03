@@ -1102,7 +1102,7 @@ top page decoration
 }
 
 .img-container-l-lg {
-    width: 160px;
+    width: fit-content;
     padding: 35px 10px 35px 35px;
 }
 
@@ -1434,7 +1434,8 @@ article decoration
 
     .img-face-container,
     .img-container-r,
-    .img-container-l {
+    .img-container-l,
+    .img-container-l-lg {
         width: 150px;
         margin: 0 auto;
         padding: 0;
