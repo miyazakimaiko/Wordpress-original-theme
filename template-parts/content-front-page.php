@@ -29,10 +29,10 @@
 
                 <div class="topPage-wrapper1">
                     
-                    <p>I'm a self-taught web coder and junior web developer in Dublin. I create products from scratch.</p>
+                    <p><?php the_field('about_me')?></p>
                     
                     <div class="single-link-container">
-                        <a class="single-link1" href="https://miyazakimaiko.com/about-me">Read More About Me</a>
+                        <a class="single-link1" href="<?php the_field('read_more_link')?>">Read More About Me</a>
                     </div>
                 
                 </div>
@@ -56,27 +56,27 @@
                         <div class="tab-link-wrapper">
 
                             <div class="tab-link-container">
-                                <a class="tab-link" href="https://miyazakimaiko.com/portfolio#port10">JavaScript</a>
+                                <a class="tab-link" href="<?php the_field('what_i_do_link_01')?>"><?php the_field('what_i_do_link_01_title')?></a>
                             </div>
 
                             <div class="tab-link-container">
-                                <a class="tab-link" href="https://miyazakimaiko.com/portfolio#port20">WordPress</a>
+                                <a class="tab-link" href="<?php the_field('what_i_do_link_02')?>"><?php the_field('what_i_do_link_02_title')?></a>
                             </div>
 
                             <div class="tab-link-container">
-                                <a class="tab-link" href="https://miyazakimaiko.com/portfolio#port30">PHP</a>
+                                <a class="tab-link" href="<?php the_field('what_i_do_link_03')?>"><?php the_field('what_i_do_link_03_title')?></a>
                             </div>
 
                             <div class="tab-link-container">
-                                <a class="tab-link" href="https://miyazakimaiko.com/portfolio#port30">HTML</a>
+                                <a class="tab-link" href="<?php the_field('what_i_do_link_04')?>"><?php the_field('what_i_do_link_04_title')?></a>
                             </div>
 
                             <div class="tab-link-container">
-                                <a class="tab-link" href="https://miyazakimaiko.com/portfolio#port10">CSS</a>
+                                <a class="tab-link" href="<?php the_field('what_i_do_link_05')?>"><?php the_field('what_i_do_link_05_title')?></a>
                             </div>
 
                             <div class="tab-link-container">
-                                <a class="tab-link" href="https://miyazakimaiko.com/portfolio#port20">Responsive Web Design</a>
+                                <a class="tab-link" href="<?php the_field('what_i_do_link_06')?>"><?php the_field('what_i_do_link_06_title')?></a>
                             </div>
 
                         </div><!-- tab-link-wrapper -->
@@ -90,7 +90,7 @@
             <section class="flex-flow3">
 
                 <div class="img-container-r">
-                    <a href="https://miyazakimaiko.com/portfolio">
+                    <a href="<?php the_field('my_portfolio_link')?>">
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/window.png" alt="window" class="image-window">
                     </a>
                 </div>
@@ -101,7 +101,7 @@
                     
                     <div class="single-link-container">
 
-                        <p>Please click the picture to see my work.</p>
+                        <p><?php the_field('my_portfolio_text')?></p>
 
                     </div><!-- single-link-container -->
 
@@ -112,7 +112,7 @@
             <section class="flex-flow4">
 
                 <div class="img-container-l">
-                    <a href="https://miyazakimaiko.com/contact">
+                    <a href="<?php the_field('get_in_touch_link')?>">
                         <img src="<?php bloginfo('template_directory'); ?>/assets/img/mail.png" alt="mail" class="image-mail">
                     </a>
                 </div>
@@ -123,7 +123,7 @@
                     
                     <div class="single-link-container">
 
-                        <p>Feel free to contact me via email!</p>
+                        <p><?php the_field('get_in_touch_text')?></p>
 
                     </div><!-- single-link-container -->
 
